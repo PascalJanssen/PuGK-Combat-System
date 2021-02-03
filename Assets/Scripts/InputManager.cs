@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && (Input.GetButton("Horizontal") || Input.GetButton("Vertical")))
         {
             if(lastWalkTime > Time.fixedTime - 0.5f)
             {
